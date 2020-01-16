@@ -1,0 +1,59 @@
+@mixin underline ($text,$margin-left){
+	color:white;
+	text-decoration: $text;
+	margin-left:$margin-left;
+	padding:0 10px;
+}
+
+footer{
+	position: relative;
+	max-height: 63px;
+	display: flex;
+	align-items: center;
+	background: black;
+	font-size:13px;
+	font-family: arial;
+	justify-content: flex-end;
+	a{
+	@include underline(underline,5px);
+	}
+	span{
+		@include underline(none,5px);
+	}
+	a:nth-child(2){
+		text-align:right;
+		flex-grow:2;
+	}
+
+}
+@media (max-width:900px){
+	footer{
+		flex-direction: column;
+		max-height:455px;
+		align-items:flex-start;
+		padding:0 20px;
+		span{
+			@include underline(none,0px);
+			border-top:1px solid rgba(255,255,255,.1);
+			height:55px;
+			line-height: 55px;
+			width:100%;
+		}
+		a{
+			@include underline(underline,0px);
+			height:55px;
+			width:100%;
+			border-top:1px solid rgba(255,255,255,.1);
+			line-height: 55px;
+		}
+		a:nth-child(2){
+			text-align: left;
+		}
+		img:last-child{
+			position: absolute;
+			right:0;
+			bottom:0;
+			height:55px;
+		}
+	}
+	}

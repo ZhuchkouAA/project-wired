@@ -1,0 +1,63 @@
+/*5 пикселей лишних в хедере*/
+header{
+	background-color: white;
+	display: none;
+}
+$color-line:#bfbfbf;
+.top-header {
+	display: flex;
+	border-bottom:1px solid $color-line;
+	a:nth-child(2){
+	margin:0 auto;
+	svg{
+	width:380px;
+	height:140px;
+	}
+	}
+	.subscribe{
+	width:218px;
+	padding-left:60px;
+	position:absolute;
+	display: flex;
+	top:29px;
+	img {
+	min-width:85px;
+	height:116px;
+
+	}
+	span {
+	align-self:center;
+	display: block;
+	font-family: Brutal,sans-serif;
+	font-weight: bold;
+	font-size:13px;
+
+	}
+	span:last-child:hover {
+			transition: all 0.1s ease-in-out 0s;
+			background: black;
+			a{color:white;}
+		}
+	span:last-child{
+		border:1px solid;
+		padding:4px 7px;
+		font-size:12px;
+		text-transform: uppercase;
+		a{
+			color:black;
+		}
+		
+	
+	}
+	}
+	}
+@media (min-width:1024px){
+	header{
+		display: block;
+	}
+}
+
+
+
+
+
