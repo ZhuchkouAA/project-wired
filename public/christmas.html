@@ -510,6 +510,15 @@
   		});
 		});
 	</script>
+	<script>
+		let changeOverflow = document.getElementById('burger');
+		changeOverflow.addEventListener('change', function() {
+			if (this.checked)
+				document.body.style.overflow = 'hidden';
+			else
+				document.body.style.overflow = 'visible';
+		})
+	</script>
 </body>
 </html>
 

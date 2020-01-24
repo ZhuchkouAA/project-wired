@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald:700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
+	<header id='head'>
 		<div class='top-header'>
 			<div class='subscribe'>
 				<img src='./img/wired-mini.jpg' alt='mini-wired-pic'>
@@ -54,8 +54,8 @@
 				</a>
 			</div>
 			<div class="burger">
-        		<input type="checkbox" id="burger">
-        		<label for="burger"></label>
+					<input type="checkbox" id="burger">
+        			<label for="burger"></label>
         		<div class='nav-list'>
         			<div class='search'>
         				<div>
@@ -259,9 +259,24 @@
 				</div>
 
 			</div>
-			<div class='navigation__item_lastRight'><svg viewBox="-21 -21 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M19.8 18.94l-7.7-7.7a6.87 6.87 0 1 0-.93.91l7.71 7.71a.65.65 0 0 0 .92-.92zM1.31 6.81a5.56 5.56 0 1 1 5.56 5.56 5.57 5.57 0 0 1-5.56-5.56z"></path></svg></div>
+			<div class='navigation__item_lastRight'>
+				<input type="checkbox" id='search'>
+				<label for="search">
+					<svg viewBox="-21 -21 66 66" xmlns="http://www.w3.org/2000/svg"><path d="M19.8 18.94l-7.7-7.7a6.87 6.87 0 1 0-.93.91l7.71 7.71a.65.65 0 0 0 .92-.92zM1.31 6.81a5.56 5.56 0 1 1 5.56 5.56 5.57 5.57 0 0 1-5.56-5.56z"></path></svg>
+					
+					<svg viewBox="-231 -231 741.171 741.171" xmlns="http://www.w3.org/2000/svg"><path fill="#404040" d="M138.138,120.754l99.118-98.576c4.752-4.704,4.752-12.319,0-17.011c-4.74-4.704-12.439-4.704-17.179,0
+					l-99.033,98.492L21.095,3.699c-4.74-4.752-12.439-4.752-17.179,0c-4.74,4.764-4.74,12.475,0,17.227l99.876,99.888L3.555,220.497
+					c-4.74,4.704-4.74,12.319,0,17.011c4.74,4.704,12.439,4.704,17.179,0l100.152-99.599l99.551,99.563
+					c4.74,4.752,12.439,4.752,17.179,0c4.74-4.764,4.74-12.475,0-17.227L138.138,120.754z"/>
+					</path>
+					</svg>
+				</label>
+			</div>
 		</nav>
 		<div class='main'>
+			<div class='search-block' id='search-block' style='display:none'>
+				<input type="search"  placeholder="Search">
+			</div>
 			<span class='topic'>
 			TOP STORIES
 			</span>
@@ -688,7 +703,29 @@
 			<a href='#'>Contact</a>
 			<span>© Condé Nast Britain 2020</span>
 			<img src='./img/logo-footer-end.jpg' alt='logo-footer-end'>
-		
 	</footer>
+	<script>
+		let changeOverflow = document.getElementById('burger');
+		changeOverflow.addEventListener('change', function() {
+			if (this.checked)
+				document.body.style.overflow = 'hidden';
+
+			else
+				document.body.style.overflow = 'visible';
+		})
+	</script>
+	<script>
+		let changeDisplay = document.getElementById('search');
+		changeDisplay.addEventListener('change', function() {
+			if (this.checked)
+				document.getElementById('search-block').style.display = 'block';
+
+			else
+				document.getElementById('search-block').style.display = 'none';
+		})
+	</script>
+	
+	
+	
 </body>
 </html>
