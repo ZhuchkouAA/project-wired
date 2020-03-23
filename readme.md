@@ -1,8 +1,8 @@
 ### in this project i used technology:
-#### Sass
-#### jQuery (owlcarousel2)
-#### npm
-#### Desktop first responsive design
+* Sass
+* jQuery (owlcarousel2)
+* npm
+* Desktop first responsive design
 
 ### [main page](https://ZhuchkouAA.github.io/project-wired/public)
 ### [page 1](https://zhuchkouaa.github.io/project-wired/public/christmas.html)
